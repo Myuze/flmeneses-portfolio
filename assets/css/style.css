@@ -19,6 +19,80 @@ a {
 
 header {
     display: flex;
+    padding: 1rem 0;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.title-nav {
+    display: flex;
+    width: 100%;
+    margin: 0 1rem 0;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+nav, .header-nav li {
+    display: inline;
+    align-self: center;
+    padding: 0.5rem;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 175px;
+    background-image: url( "../img/apink.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left -5px;
+    background-attachment: fixed;
+}
+
+.hero-text {
+    padding: 2rem 10rem;
+    font-size: 1.5rem;
+}
+
+#main-app {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    border: 1px solid;
+}
+
+.content {
+    display: block;
+    width: 100%; 
+    /* flex-direction: row-reverse; */
+    padding: 1rem;
+    /* justify-content: flex-start; */
+}
+
+#portifolio {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 30%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#portifolio > * {
+    margin: 0.3rem;
+}
+
+.app-card {
+    display: flex;
+    padding: 1rem;
+    height: 2rem;
+    width: 200px;
+    border: 2px solid;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 560px) {
+
+  }
