@@ -1,4 +1,6 @@
+/* Initial Global Styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,48 +12,55 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 2rem;
+    align-self: center;
 }
 
 a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
+/* Mobile Formatting from 320 -> 450 screens */
+
 header {
-    display: flex;
     padding: 1rem 0;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .title-nav {
     display: flex;
+    flex-flow: column wrap;
     width: 100%;
-    margin: 0 1rem 0;
-    text-decoration: none;
     justify-content: space-between;
 }
 
-nav, .header-nav li {
-    display: inline;
-    align-self: center;
+.header-nav {
+    padding: 1rem 0;
+}
+
+.header-nav li {
     padding: 0.5rem;
 }
 
 .hero-banner {
     width: 100%;
-    height: 300px;
+    height: 22vh;
     background-image: url( "../img/apink.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top -170px left 5px;
-    /* background-attachment: fixed; */
+    background-position: center center;
 }
 
-.hero-text {
+@media screen and (max-width: 450px) {
+}
+
+/* .hero-text {
     padding: 2rem 25rem;
     font-size: 1.5rem;
-    position: relative;
 }
 
 #main-app {
@@ -59,14 +68,7 @@ nav, .header-nav li {
     width: 66%;
     height: 300px;
     border: 1px solid;
-}
-
-.content {
-    display: block;
-    width: 100%; 
-    /* flex-direction: row-reverse; */
-    /* padding: 1rem; */
-    /* justify-content: flex-start; */
+    margin-left: auto;
 }
 
 #portifolio {
@@ -93,7 +95,8 @@ nav, .header-nav li {
     width: 200px;
     border: 2px solid;
     justify-content: flex-end;
-}
+    background: #505050;
+} */
 
 @media screen and (max-width: 992px) {
     
