@@ -17,8 +17,8 @@
                 <ul>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#portifolio">Portifolio</a></li>
-                    <li><a href="#contact-me">Contact Me</a></li>
                     <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,32 +29,46 @@
         </div>
     </header>
     <main>
-        <div class="content">
-            <section id="main-app">
-            </section>
-            <section id="portifolio">
-                <div class="port-header"><h3>Portifolio</h3></div>
-                <div class="app-card">Card1</div>
-                <div class="app-card">Card2</div>
-                <div class="app-card">Card3</div>
-                <div class="app-card">Card4</div>
-                <div class="app-card">Card5</div>
-                <div class="app-card">Card6</div>            
-
-            </section>
-            <section id="about-me">
-                <div>About Me</div>
-
-            </section>
-            <section id="resume">
-                <div>Resume</div>
-
-            </section>
-            <section id="contact-me">
-                <div>Contact Me</div>
-
-            </section>
-        </div>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias laboriosam qui, architecto nobis fugiat ullam alias perferendis, quaerat incidunt nihil odio voluptate illum, corporis fuga labore minus neque? Quae, laudantium tenetur? Perspiciatis, itaque modi dolores veniam officiis consectetur temporibus ad nisi ratione praesentium error deleniti earum voluptatem iusto? Vitae, cum!
+            </p>
+        </section>
+        <section id="portifolio">
+            <h2>Portifolio</h2>
+            <div id="main-app">
+                <img src=".\assets\img\twicetol.jpg" alt="Twice App">
+                <div class="app-card-container">
+                    <div class="app-card">Card1</div>
+                    <div class="app-card">Card2</div>
+                    <div class="app-card">Card3</div>
+                    <div class="app-card">Card4</div>
+                    <div class="app-card">Card5</div>
+                    <div class="app-card">Card6</div>            
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <a href="./assets/content/MenesesFlorian_Resume.pdf" download="FlorianMeneses_Resume">Download Resume</a>
+        </section>
+        <section id="contact-me">
+            <h2>Contact Me</h2>
+            <form>
+                <p>
+                    <label class="text-right" for="name">Name:</label>
+                    <input type="text" id="name" name="user-name">
+                </p>
+                <p>
+                    <label class="text-right" for="email">Email:</label>
+                    <input type="text" id="email" name="user-email">
+                </p>
+                    <div class="text-center">
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+        </section>
     </main>
 </body>
 </html>
