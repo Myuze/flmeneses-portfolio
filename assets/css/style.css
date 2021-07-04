@@ -24,7 +24,7 @@ li {
     list-style: none;
 }
 
-/* Mobile Formatting from 320 -> 450 screens */
+/* Mobile Formatting from 320 -> 490 screens */
 
 header {
     padding: 1rem 0;
@@ -64,6 +64,14 @@ section {
     padding: 0 1rem 1rem;
 }
 
+#portifolio {
+    flex-flow: row-reverse wrap;
+}
+
+.app-card-container {
+    flex-flow: row wrap;
+}
+
 #apps {
     display: flex;
     flex-flow: row wrap;
@@ -74,66 +82,28 @@ section {
     max-width: 100%;
 }
 
-#portifolio {
-    flex-flow: row-reverse wrap;
-}
-
-.app-card-container {
-    flex-flow: row wrap;
-}
-
 .app-card {
     width: 50%;
     border: 2px solid red;
 }
 
-/* @media screen and (max-width: 450px) {
-} */
-
-/* .hero-text {
-    padding: 2rem 25rem;
-    font-size: 1.5rem;
+.app-card h4 {
+    position: absolute;
+    margin-top: 5rem;
+    width: 25%;
 }
 
-#main-app {
-    display: inline-block;
-    width: 66%;
-    height: 300px;
-    border: 1px solid;
-    margin-left: auto;
+.app-card h4 span { 
+    color: aqua; 
+    font: bold 15px/30px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px; 
+ }
+
+@media screen and (min-width: 490px) {
+    .header-nav * {
+        display: inline;
+    }
 }
-
-#portifolio {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.port-header {
-    display: flex;
-}
-
-#portifolio > * {
-    margin: 0.3rem;
-    margin-left: auto;
-}
-
-.app-card {
-    display: flex;
-    padding: 1rem;
-    height: 2rem;
-    width: 200px;
-    border: 2px solid;
-    justify-content: flex-end;
-    background: #505050;
-} */
-
-/* @media screen and (max-width: 992px) {
-    
-}
-
-@media screen and (max-width: 560px) {
-
-  } */
