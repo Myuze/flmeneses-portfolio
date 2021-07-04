@@ -64,29 +64,31 @@ section {
     padding: 0 1rem 1rem;
 }
 
-#main-app {
-    padding: 0;
-    width: 100%;
+#apps {
+    display: flex;
+    flex-flow: row wrap;
     border: 2px solid;
 }
 
-#main-app img {
+#apps img {
     max-width: 100%;
 }
 
 #portifolio {
-    flex: 0 0 60%;
     flex-flow: row-reverse wrap;
-    margin-left: auto;
+}
+
+.app-card-container {
+    flex-flow: row wrap;
 }
 
 .app-card {
-    flex: 0 0 50%;
-    border: 2px red;
+    width: 50%;
+    border: 2px solid red;
 }
 
-@media screen and (max-width: 450px) {
-}
+/* @media screen and (max-width: 450px) {
+} */
 
 /* .hero-text {
     padding: 2rem 25rem;
@@ -128,10 +130,10 @@ section {
     background: #505050;
 } */
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     
 }
 
 @media screen and (max-width: 560px) {
 
-  }
+  } */
