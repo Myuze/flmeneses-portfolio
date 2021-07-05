@@ -81,7 +81,7 @@ header {
 
 #hero-banner h2 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: -10rem;
     padding: 0.3rem 0.5rem;
     background: var(--app-bg-color);
     color: var(--dark);
@@ -172,6 +172,10 @@ section {
         flex-direction: row wrap;
     }
     
+    .app-card h5 {
+        margin-top: 50px;
+    }
+
     .col-1 {
         flex: 1 1 30%;
         margin-right: 10px;
