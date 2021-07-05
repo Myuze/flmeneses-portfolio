@@ -93,19 +93,7 @@ main {
 }
 
 section {
-    display: flex;
-    flex-direction: row wrap;
     padding: 0 1rem 1rem;
-}
-
-.col-1 {
-    flex: 1 1 30%;
-    margin-right: 10px;
-    border-right: 5px solid cyan;
-}
-
-.col-2 {
-    flex: 1 1 70%;
 }
 
 .app-card-container {
@@ -177,9 +165,21 @@ section {
     .header-nav a:hover {
         color: white;
         border-bottom: 4px solid white;
+    }
 
     section {
-        flex-flow:
+        display: flex;
+        flex-direction: row wrap;
+    }
+    
+    .col-1 {
+        flex: 1 1 30%;
+        margin-right: 10px;
+        border-right: 5px solid cyan;
+    }
+    
+    .col-2 {
+        flex: 1 1 70%;
     }
 }
 /* Tablet Formatting 768px */
@@ -191,5 +191,14 @@ section {
 
     #name-logo {
         padding-left: 1rem;
+    }
+
+    #contact-me .col-2{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-item {
+        flex: 1 1 50%;
     }
 }
