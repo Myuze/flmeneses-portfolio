@@ -24,6 +24,7 @@ body {
 
 h1 {
     align-self: center;
+    font-size: 2.5rem;
 }
 
 span {
@@ -55,7 +56,7 @@ header {
 }
 
 #name-logo {
-    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
 }
 
 .header-nav {
@@ -66,20 +67,24 @@ header {
     padding: 0.5rem;
 }
 
-.header-nav a:hover {
+.header-nav a:hover,
+.contact-item a:hover {
     color: white;
     border-bottom: 4px solid white;
 }
 
-#hero-banner img {
+#hero-banner {
     position: relative;
-    width: 100%;
-    clip-path: rect(0px,0px,0px,0px);
 }
 
-#hero-text {
+#hero-banner img {
+    width: 100%;
+}
+
+#hero-banner #hero-text {
     position: absolute;
-    margin-top: -10rem;
+    bottom: 50px;
+    right: 0;
     padding: 0.3rem 0.5rem;
     background: var(--app-bg-color);
     color: var(--dark);
@@ -90,12 +95,12 @@ main {
     flex-flow: column nowrap;
 }
 
-section {
+main section {
     padding: 0 1rem 1rem;
 }
 
-.app-card-container {
-    flex-flow: row wrap;
+main h3 {
+    padding-bottom: 1rem;
 }
 
 #apps {
@@ -107,13 +112,11 @@ section {
 
 #main-app {
     position: relative;
-    flex: 1 1 100%;
-    /* border: 2px solid cornflowerblue; */
 }
 
-#apps h4 {
+#main-app .app-text {
     position: absolute;
-    margin-top: 7rem;
+    bottom: 25px;
     padding: 0.3rem 0.5rem;
     background: var(--app-bg-color);
     color: var(--dark);
@@ -122,6 +125,10 @@ section {
 #apps img {
     width: 100%;
     height: 100%;
+}
+
+#apps img:focus {
+    outline: 2px solid var(--light)
 }
 
 #app-card-container {
@@ -136,19 +143,16 @@ section {
     /* border: 2px solid red; */
 }
 
-.app-card h5 {
+.app-card .app-text {
     position: absolute;
-    margin-top: 15px;
+    width: 100%;
+    bottom: 0px;
+    font-family: Helvetica, Sans-Serif;
+    font-size: 0.7rem;
     color: var(--dark);
-}
-
-.app-card h5 span {  
-    font: bold 15px/30px Helvetica, Sans-Serif; 
-    padding: 10px; 
-    letter-spacing: -1px;  
     background: var(--app-bg-color-fb); /* fallback color */
     background: var(--app-bg-color);
- }
+}
 
 /* Format Adjustment for viewing larger than 425px */
 
@@ -162,22 +166,24 @@ section {
     }
 
     .header-nav li:hover,
-    .header-nav a:hover {
+    .header-nav a:hover,
+    .contact-item a:hover {
         color: white;
         border-bottom: 4px solid white;
     }
 
-    section {
+    main section {
         display: flex;
         flex-direction: row wrap;
     }
     
-    .app-card h5 {
+    /* .app-card h5 {
         margin-top: 50px;
-    }
+    } */
 
     .col-1 {
         flex: 1 1 30%;
+        align-items: right;
         margin-right: 10px;
         border-right: 5px solid cyan;
     }
