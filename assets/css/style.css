@@ -102,11 +102,6 @@ header {
     color: var(--dark);
 }
 
-main {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
 main section {
     padding: 0 1rem 1rem;
 }
@@ -117,7 +112,6 @@ main h3 {
 
 #apps {
     display: flex;
-    flex: 1 1 70%;
     flex-flow: row wrap;
     font-size: 0.7rem;
     color: var(--black);
@@ -129,6 +123,7 @@ main h3 {
 }
 
 #main-app {
+    flex: 1 1 100%;
     position: relative;
 }
 
@@ -159,8 +154,8 @@ main h3 {
 }
 
 .app-card {
+    flex: 0 0 50%;
     position: relative;
-    flex: 1 1 50%;
 }
 
 .app-card .app-text {
@@ -182,10 +177,6 @@ main h3 {
 /* Format Adjustment for viewing larger than 425px */
 
 @media screen and (min-width: 425px) {
-    .title-nav {
-        display: flex;
-    }
-
     .header-nav li {
         display: inline;
     }
@@ -201,16 +192,14 @@ main h3 {
         display: flex;
     }
 
-    #apps {
-        gap: 1rem;
+    #app-card-container {
+        display: flex;
+        justify-content: space-between;
     }
-    
-    /* .app-card-container {
-        gap: 0.5rem;
-    } */
 
     .app-card {
-        width: 250px;
+        margin: 5px 0px 0px 0px;
+        flex-basis: 45%;   
         height: 100px;
     }
 
@@ -229,21 +218,22 @@ main h3 {
     .col-1 {
         flex: 1 1 30%;
         font-size: 1.4rem;
-        align-items: right;
         margin-right: 10px;
         border-right: 5px solid cyan;
     }
     
     .col-2 {
         flex: 1 1 70%;
-        margin-inline-end: auto;
     }
+
+
+
 }
 
 /* Format Adjustment for viewing larger than 768px */
 
 @media screen and (min-width: 768px) {
-
+    
     .title-nav {
         flex-flow: row wrap;
     }
@@ -256,22 +246,25 @@ main h3 {
         font-size: 5vh;
     }
 
-    #contact-me .col-2{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .contact-item{
-        flex: 1 1 50%;
-        margin: auto;
-        margin-right: 20px;
+    .col-1 {
+        font-size: 2rem;
     }
 
     .app-card .app-text {
         bottom: 25px;
     }
 
-    .col-1 {
-        font-size: 2rem;
+    #contact-me {
+        align-content: center;
+    }
+
+    .contact-info-container {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .contact-item{
+        margin: auto;
     }
 }
