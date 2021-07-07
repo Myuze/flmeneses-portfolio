@@ -10,7 +10,7 @@
     --apps-subtitle: 'Courier New', Courier, monospace;
 
     /* Font Sizes */
-    --h1: 2.5rem;
+    --h1-default: 2.5rem;
 
     /* Links Font Families */
     --app-links: 'Courier New', Courier, monospace;
@@ -34,7 +34,7 @@ body {
 
 h1 {
     align-self: center;
-    font-size: var(--h1);
+    font-size: var(--h1-default);
 }
 
 span {
@@ -96,7 +96,7 @@ header {
 #hero-banner #hero-text {
     position: absolute;
     bottom: 50px;
-    right: 0;
+    right: 20px;
     padding: 0.3rem 0.5rem;
     background: var(--app-bg-color);
     color: var(--dark);
@@ -205,15 +205,13 @@ main h3 {
         gap: 1rem;
     }
     
-    .app-card-container {
+    /* .app-card-container {
         gap: 0.5rem;
-    }
+    } */
 
     .app-card {
         width: 250px;
         height: 100px;
-        column-gap: 5px;
-        row-gap: 5px;
     }
 
     #main-app,
