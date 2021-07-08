@@ -266,6 +266,7 @@ main h3 {
     }
 
     #name-logo {
+        font-size: 4vw;
         padding-left: 1rem;
     }
 
@@ -274,7 +275,7 @@ main h3 {
     }
 
     .col-1 {
-        font-size: 2rem;
+        font-size: 3vw;
     }
 
     
@@ -311,11 +312,11 @@ main h3 {
 
 @media screen and (min-width: 1024px) {
     #name-logo h1 {
-        font-size: 4rem;
+        font-size: 6vw;
     }
 
     .header-nav {
-        font-size: 1.2rem;
+        font-size: 2vw;
     }
     
     #about-me {
@@ -326,8 +327,8 @@ main h3 {
         font-size: 1.3vw;
     }
 
-    .col-1 h3 {
-        font-size: 5vw;
+    .col-1 {
+        font-size: 4vw;
     }
 
     #contact-info-container {
@@ -337,11 +338,7 @@ main h3 {
 
 @media screen and (min-width: 2560px) {
     #name-logo h1 {
-        font-size: 10rem;
-    }
-
-    .header-nav {
-        font-size: 2.5rem;
+        font-size: 7vw;
     }
 
     #about-me {
