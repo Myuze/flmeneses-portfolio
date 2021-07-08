@@ -298,7 +298,7 @@ main h3 {
         align-content: center;
     }
 
-    .contact-info-container {
+    #contact-info-container {
         display: flex;
         flex-direction: row;
         align-self: center;
@@ -330,7 +330,7 @@ main h3 {
         font-size: 5vw;
     }
 
-    .contact-info-container {
+    #contact-info-container {
         font-size: 1.5rem;
     }
 }
@@ -356,7 +356,7 @@ main h3 {
         font-size: 3rem;
     }
 
-    .contact-info-container {
+    #contact-info-container {
         font-size: 3rem;
     }
 }
