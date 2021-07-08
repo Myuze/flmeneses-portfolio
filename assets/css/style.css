@@ -88,16 +88,25 @@ header {
     position: relative;
 }
 
-#hero-banner img {
+#hero-bg {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
 }
 
-#hero-banner #hero-text {
+#avatar {
     position: absolute;
-    bottom: 50px;
-    right: 20px;
+    width: 100%;
+    max-width: 50vw;
+    clip-path: circle(20vw at center);
+    filter: drop-shadow(30px 10px 4px rgba(0, 255, 255, 0.959));
+}
+
+#hero-text {
+    position: absolute;
+    font-size: 4vh;
+    bottom: 10px;
+    right: 10px;
     padding: 0.3rem 0.5rem;
     background: var(--app-bg-color);
     color: var(--dark);
@@ -199,6 +208,16 @@ main h3 {
         display: flex;
     }
 
+    #avatar {
+        max-width: 255px;
+        clip-path: circle(90px at center);
+    }
+
+    #hero-text {
+        bottom: 50px;
+        right: 20px;
+    }
+
     #app-card-container {
         display: flex;
         justify-content: space-between;
@@ -222,6 +241,10 @@ main h3 {
         rgba(232, 102, 236, 1);
     }
 
+    #resume {
+        font-size: 1.5rem;
+    }
+
     .col-1 {
         flex: 1 1 30%;
         font-size: 1.4rem;
@@ -231,6 +254,7 @@ main h3 {
     
     .col-2 {
         flex: 1 1 70%;
+        margin: auto;
     }
 }
 
@@ -245,7 +269,7 @@ main h3 {
         padding-left: 1rem;
     }
 
-    #hero-banner #hero-text {
+    #hero-text {
         font-size: 5vh;
     }
 
@@ -273,18 +297,18 @@ main h3 {
 }
 
 @media screen and (min-width: 1024px) {
-    /* body {
-        font-size: ;
-    } */
-
     #name-logo h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .header-nav {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
+    #about-me {
+        font-size: 1.5rem;
+    }
+
     .col-1 h3 {
         font-size: 2.5rem;
     }
