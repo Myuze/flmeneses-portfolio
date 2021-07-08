@@ -43,6 +43,11 @@ a {
     color: var(--light);
 }
 
+a:hover:not(#main-app a, .app-card a) {
+    color: white;
+    border-bottom: 4px solid white;
+}
+
 li {
     list-style: none;
 }
@@ -185,9 +190,7 @@ main h3 {
         display: inline;
     }
 
-    .header-nav li:hover,
-    .header-nav a:hover,
-    .contact-item a:hover {
+    .header-nav li:hover {
         color: white;
         border-bottom: 4px solid white;
     }
@@ -266,5 +269,27 @@ main h3 {
 
     .contact-item{
         margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* body {
+        font-size: ;
+    } */
+
+    #name-logo h1 {
+        font-size: 3rem;
+    }
+
+    .header-nav {
+        font-size: 1rem;
+    }
+    
+    .col-1 h3 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info-container {
+        font-size: 1.5rem;
     }
 }
