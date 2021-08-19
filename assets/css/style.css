@@ -54,6 +54,34 @@ li {
     list-style: none;
 }
 
+#main-app {
+    background-image: url("https://github.com/Myuze/weather-fm/raw/main/weather.jpg");
+    background-size:cover;
+}
+
+#app-1 {
+    background-image: url("https://github.com/Myuze/calendar-fm/raw/master/calendar.jpg");
+    background-size: cover;
+}
+
+#app-2 {
+    background-image: url("https://github.com/Myuze/js-quiz/raw/main/js-quiz.JPG");
+    max-width: 100%;
+    background-size: cover;
+}
+
+#app-3 {
+    background-image: url("https://github.com/Myuze/calendar-fm/raw/master/calendar.jpg");
+    max-width: 100%;
+    background-size: cover;
+}
+
+#app-4 {
+    background-image: url("https://github.com/Myuze/calendar-fm/raw/master/calendar.jpg");
+    max-width: 100%;
+    background-size: cover;
+}
+
 /* Mobile Formatting from 320 -> 425 screens */
 
 header {
@@ -149,7 +177,6 @@ main h3 {
     font-family: var(--apps-title);
     background: var(--app-bg-color);
     color: var(--dark);
-    transition: all 0.5s ease-in-out;
 }
 
 #main-app,
@@ -161,6 +188,11 @@ main h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 500ms ease-in-out;
+}
+
+#apps img:hover {
+    opacity: 0.0%;
 }
 
 #apps img:focus {
@@ -186,12 +218,6 @@ main h3 {
     color: var(--dark);
     background: var(--app-bg-color-fb); /* fallback color */
     background: var(--app-bg-color);
-    transition: all 0.5s ease-in-out;
-}
-
-#main-app:hover,
-.app-card:hover {
-    filter:contrast(.75);
 }
 
 /* Format Adjustment for viewing larger than 425px */
@@ -228,7 +254,7 @@ main h3 {
     .app-card {
         margin: 10px 0px 0px 0px;
         flex-basis: 49%;   
-        height: 15vh;
+        height: 15vw;
     }
 
     #main-app,
