@@ -351,6 +351,10 @@ main h3 {
         font-size: 1.5rem;
     }
 
+    #about-me .col-2 {
+        font-size: 2rem;
+    }
+
     .app-card .app-text p {
         font-size: 1.3vw;
     }
