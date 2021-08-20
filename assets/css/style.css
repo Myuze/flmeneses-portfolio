@@ -15,6 +15,8 @@
 
     /* Links Font Families */
     --app-links: 'Courier New', Courier, monospace;
+    --michroma: 'Michroma', sans-serif;
+    --aldrich: 'Aldrich', sans-serif;
 
     /* Background Colors */
     --app-bg-color-fb: rgb(0, 0, 0);
@@ -33,10 +35,35 @@ body {
     background: var(--app-bg-color-fb);
 }
 
+#about-me {
+    padding: 1rem;
+}
+
+.tech-stack {
+    font-family: var(--michroma);
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(177, 80, 180, 0.24), black, black);
+    border-radius: 20px;  
+}
+
+.languages {
+    color:rgb(198, 37, 204);
+    font-family: var(--apps-subtitle)
+}
+
 h1 {
     align-self: center;
     font-size: var(--h1-default);
-    font-family: var(--cinzel-400);
+    font-family: var(--aldrich);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Michroma', sans-serif;
 }
 
 a {
@@ -223,6 +250,13 @@ main h3 {
 /* Format Adjustment for viewing larger than 425px */
 
 @media screen and (min-width: 425px) {
+    h2 {
+        font-size: 3rem;
+    }
+    main h3 {
+        font-size: 1rem;
+    }
+
     .header-nav li {
         display: inline;
     }
@@ -276,6 +310,7 @@ main h3 {
     .col-1 {
         flex: 1 1 30%;
         font-size: 1.4rem;
+        font-family: 'Michroma', sans-serif;
         margin-right: 10px;
         border-right: 5px solid cyan;
     }
@@ -289,6 +324,13 @@ main h3 {
 /* Format Adjustment for viewing larger than 768px */
 
 @media screen and (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+
+    main h3 {
+        font-size: 2rem;
+    }
     .title-nav {
         flex-flow: row wrap;
     }
@@ -339,6 +381,10 @@ main h3 {
 }
 
 @media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 6rem;
+    }
+
     #name-logo h1 {
         font-size: 5vw;
     }
@@ -369,16 +415,24 @@ main h3 {
 }
 
 @media screen and (min-width: 2560px) {
+    h2 {
+        font-size: 12rem;
+    }
+
+    h3 {
+        font-size: 12rem;
+    }
+
+    a {
+        font-size: 12rem;
+    }
+
     #name-logo h1 {
         font-size: 7vw;
     }
 
     #about-me {
         font-size: 2.5rem;
-    }
-
-    .col-1 h3 {
-        font-size: 6rem;
     }
 
     #resume-dl {
