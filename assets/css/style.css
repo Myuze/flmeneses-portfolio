@@ -21,6 +21,14 @@
     /* Background Colors */
     --app-bg-color-fb: rgb(0, 0, 0);
     --app-bg-color: rgba(0, 238, 255, 0.7);
+
+    /* Animations Speeds */
+    --lang-transition: 2s;
+    --lang-delay: 1s;
+    --lang-delay-diff: 0.5s;
+
+    /* Languages Initial Position */
+    --lang-start-pos: 10rem;
 }
 
 * {
@@ -48,8 +56,36 @@ body {
 }
 
 .languages {
+    position: relative;
     color:rgb(198, 37, 204);
-    font-family: var(--apps-subtitle)
+    font-family: var(--apps-subtitle);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.languages li:nth-child(1) {
+    opacity: 0;
+    transform: translateX(var(--lang-start-pos));
+    animation: rightInLeft var(--lang-transition) ease calc(var(--lang-delay) - var(--lang-delay-diff)) forwards;
+}
+.languages li:nth-child(2) {
+    opacity: 0;
+    transform: translateX(var(--lang-start-pos));
+    animation: rightInLeft var(--lang-transition) ease var(--lang-delay) forwards;
+}
+.languages li:nth-child(3) {
+    opacity: 0;
+    transform: translateX(var(--lang-start-pos));
+    animation: rightInLeft var(--lang-transition) ease calc(var(--lang-delay) + var(--lang-delay-diff)) forwards;
+}
+
+@keyframes rightInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 h1 {
