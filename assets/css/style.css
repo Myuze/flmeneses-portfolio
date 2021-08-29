@@ -23,9 +23,9 @@
     --app-bg-color: rgba(0, 238, 255, 0.7);
 
     /* Animations Speeds */
-    --lang-transition: 2s;
-    --lang-delay: 1s;
-    --lang-delay-diff: 0.5s;
+    --lang-transition: 2000ms;
+    --lang-delay: 1000ms;
+    --lang-delay-diff: 500ms;
 
     /* Languages Initial Position */
     --lang-start-pos: 10rem;
@@ -57,7 +57,7 @@ body {
 
 .languages {
     position: relative;
-    color:rgb(198, 37, 204);
+    color:rgb(51, 204, 37);
     font-family: var(--apps-subtitle);
     top: 0;
     bottom: 0;
@@ -216,7 +216,7 @@ main h3 {
 #apps {
     display: flex;
     flex-flow: row wrap;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     color: var(--black);
 }
 
@@ -225,7 +225,7 @@ main h3 {
 }
 
 #apps h5 {
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 #main-app {
