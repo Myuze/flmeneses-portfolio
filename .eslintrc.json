@@ -25,6 +25,12 @@
         ],
         "no-undef": [
             "warn"
+        ],
+        "no-multiple-empty-lines": [
+            "warn"
+        ],
+        "no-trailing-spaces": [
+            "warn"
         ]
     }
 }
