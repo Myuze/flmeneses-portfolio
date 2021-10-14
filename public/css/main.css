@@ -1,23 +1,18 @@
 /* Initial Global Styles */
-
 :root {
   /* Text Color Themes */
   --light: aqua;
   --dark: black;
-
   /* Font Families */
   --apps-title: Impact;
-  --apps-subtitle: 'Courier New', Courier, monospace;
-  --cinzel-400: 'Cinzel', serif;
-
+  --apps-subtitle: "Courier New", Courier, monospace;
+  --cinzel-400: "Cinzel", serif;
   /* Font Sizes */
   --h1-default: 2.5rem;
-
   /* Links Font Families */
-  --app-links: 'Courier New', Courier, monospace;
-  --michroma: 'Michroma', sans-serif;
-  --aldrich: 'Aldrich', sans-serif;
-
+  --app-links: "Courier New", Courier, monospace;
+  --michroma: "Michroma", sans-serif;
+  --aldrich: "Aldrich", sans-serif;
   /* Background Colors */
   --app-bg-color-fb: rgb(0, 0, 0);
   --app-bg-color: rgba(0, 238, 255, 0.7);
@@ -43,13 +38,13 @@ body {
   font-family: var(--michroma);
   margin-top: 1rem;
   padding: 1rem;
-  background: linear-gradient(to right, rgb(177, 80, 180, 0.24), black, black);
-  border-radius: 20px;  
+  background: linear-gradient(to right, rgba(177, 80, 180, 0.24), black, black);
+  border-radius: 20px;
 }
 
 .languages {
-  color:rgb(198, 37, 204);
-  font-family: var(--apps-subtitle)
+  color: #c625cc;
+  font-family: var(--apps-subtitle);
 }
 
 h1 {
@@ -63,7 +58,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Michroma', sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 a {
@@ -83,7 +78,7 @@ li {
 
 #main-app {
   background-image: url("https://github.com/Myuze/weather-fm/raw/main/weather.jpg");
-  background-size:cover;
+  background-size: cover;
 }
 
 #app-1 {
@@ -110,7 +105,6 @@ li {
 }
 
 /* Mobile Formatting from 320 -> 425 screens */
-
 header {
   padding: 1rem 0;
   text-align: center;
@@ -124,7 +118,7 @@ header {
 }
 
 #name-logo {
-  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
 }
 
 .header-nav {
@@ -219,11 +213,11 @@ main h3 {
 }
 
 #apps img:hover {
-  opacity: 0.0%;
+  opacity: 0%;
 }
 
 #apps img:focus {
-  outline: 2px solid var(--light)
+  outline: 2px solid var(--light);
 }
 
 #app-card-container {
@@ -243,203 +237,200 @@ main h3 {
   padding: 0.3rem 0.5rem;
   font-family: var(--apps-title);
   color: var(--dark);
-  background: var(--app-bg-color-fb); /* fallback color */
+  background: var(--app-bg-color-fb);
+  /* fallback color */
   background: var(--app-bg-color);
 }
 
 /* Format Adjustment for viewing larger than 425px */
-
 @media screen and (min-width: 425px) {
   h2 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
+
   main h3 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .header-nav li {
-      display: inline;
+    display: inline;
   }
 
   .header-nav li:hover {
-      color: white;
-      border-bottom: 4px solid white;
+    color: white;
+    border-bottom: 4px solid white;
   }
 
   main section {
-      display: flex;
+    display: flex;
   }
 
   #avatar {
-      max-width: 255px;
-      clip-path: circle(90px at center);
+    max-width: 255px;
+    clip-path: circle(90px at center);
   }
 
   #hero-text {
-      bottom: 50px;
-      right: 20px;
+    bottom: 50px;
+    right: 20px;
   }
 
   #app-card-container {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .app-card {
-      margin: 10px 0px 0px 0px;
-      flex-basis: 49%;   
-      height: 15vw;
+    margin: 10px 0px 0px 0px;
+    flex-basis: 49%;
+    height: 15vw;
   }
 
   #main-app,
-  .app-card {
-      border: 5px solid var(--light)
+.app-card {
+    border: 5px solid var(--light);
   }
 
   #main-app:hover,
-  .app-card:hover {
-      box-shadow: 0px 0px 8px
-      rgba(232, 102, 236, 1), 0 0 15px
-      rgba(232, 102, 236, 1);
+.app-card:hover {
+    box-shadow: 0px 0px 8px #e866ec, 0 0 15px #e866ec;
   }
 
   #resume {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .col-1 {
-      flex: 1 1 30%;
-      font-size: 1.4rem;
-      font-family: 'Michroma', sans-serif;
-      margin-right: 10px;
-      border-right: 5px solid cyan;
+    flex: 1 1 30%;
+    font-size: 1.4rem;
+    font-family: "Michroma", sans-serif;
+    margin-right: 10px;
+    border-right: 5px solid cyan;
   }
-  
+
   .col-2 {
-      flex: 1 1 70%;
-      margin: auto;
+    flex: 1 1 70%;
+    margin: auto;
   }
 }
-
 /* Format Adjustment for viewing larger than 768px */
-
 @media screen and (min-width: 768px) {
   h2 {
-      font-size: 4rem;
+    font-size: 4rem;
   }
 
   main h3 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
+
   .title-nav {
-      flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 
   #name-logo {
-      font-size: 4vw;
-      padding-left: 1rem;
+    font-size: 4vw;
+    padding-left: 1rem;
   }
 
   #hero-text {
-      font-size: 5vh;
+    font-size: 5vh;
   }
 
   .col-1 {
-      font-size: 3vw;
+    font-size: 3vw;
   }
 
-  
   #apps h5 {
-      font-size: 2vw;
+    font-size: 2vw;
   }
 
   #main-app .app-text p {
-      font-size: 2vw;
+    font-size: 2vw;
   }
-  
+
   .app-card .app-text {
-      bottom: 25px;
+    bottom: 25px;
   }
 
   .app-card .app-text p {
-      font-size: 1.2vw;
+    font-size: 1.2vw;
   }
-  
+
   #contact-me {
-      align-content: center;
+    align-content: center;
   }
 
   #contact-info-container {
-      display: flex;
-      flex-direction: row;
-      align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
   }
 
-  .contact-item{
-      margin: auto;
+  .contact-item {
+    margin: auto;
   }
 }
-
 @media screen and (min-width: 1024px) {
   h2 {
-      font-size: 6rem;
+    font-size: 6rem;
   }
 
   #name-logo h1 {
-      font-size: 5vw;
+    font-size: 5vw;
   }
 
   .header-nav {
-      font-size: 2vw;
+    font-size: 2vw;
   }
-  
+
   #about-me {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   #about-me .col-2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .app-card .app-text p {
-      font-size: 1.3vw;
+    font-size: 1.3vw;
   }
 
   .col-1 {
-      font-size: 4vw;
+    font-size: 4vw;
   }
 
   #contact-info-container {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
-
 @media screen and (min-width: 2560px) {
   h2 {
-      font-size: 12rem;
+    font-size: 12rem;
   }
 
   h3 {
-      font-size: 12rem;
+    font-size: 12rem;
   }
 
   a {
-      font-size: 12rem;
+    font-size: 12rem;
   }
 
   #name-logo h1 {
-      font-size: 7vw;
+    font-size: 7vw;
   }
 
   #about-me {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   #resume-dl {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   #contact-info-container {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

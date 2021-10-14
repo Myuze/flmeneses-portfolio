@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS fm_portfolio_db;
+DROP DATABASE IF EXISTS myuze_db;
 
-CREATE DATABASE fm_portfolio_db;
+CREATE DATABASE myuze_db;
