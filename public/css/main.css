@@ -41,8 +41,9 @@ body {
   font-family: var(--michroma);
   margin-top: 1rem;
   padding: 1rem;
-  background: linear-gradient(to right, rgba(177, 80, 180, 0.24), black, black);
+  background: linear-gradient(to bottom, rgba(177, 80, 180, 0.24), black, black);
   border-radius: 20px;
+  overflow: hidden;
 }
 .tech-stack-container li {
   color: lime;
