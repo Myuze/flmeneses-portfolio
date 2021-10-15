@@ -39,17 +39,20 @@ body {
   padding: 1rem;
 }
 
-.tech-stack {
+.tech-stack-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   font-family: var(--michroma);
   margin-top: 1rem;
   padding: 1rem;
   background: linear-gradient(to right, rgb(177, 80, 180, 0.24), black, black);
   border-radius: 20px;  
-}
 
-.languages {
-  color:rgb(198, 37, 204);
-  font-family: var(--apps-subtitle)
+  li {
+    color: lime;
+    font-family: var(--apps-subtitle)
+  }
 }
 
 h1 {
