@@ -34,16 +34,15 @@ body {
   padding: 1rem;
 }
 
-.tech-stack {
+.tech-stack-container {
   font-family: var(--michroma);
   margin-top: 1rem;
   padding: 1rem;
   background: linear-gradient(to right, rgba(177, 80, 180, 0.24), black, black);
   border-radius: 20px;
 }
-
-.languages {
-  color: #c625cc;
+.tech-stack-container li {
+  color: lime;
   font-family: var(--apps-subtitle);
 }
 
