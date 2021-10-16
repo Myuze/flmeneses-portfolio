@@ -3,3 +3,4 @@ root.session.sql
 .env
 .husky
 .netlify
+.vscode
