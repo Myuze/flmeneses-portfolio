@@ -2,3 +2,6 @@ node_modules
 root.session.sql
 .env
 .husky
+
+# Local Netlify folder
+.netlify
