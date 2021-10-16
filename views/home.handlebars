@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Cinzel&family=Michroma&display=swap" rel="stylesheet">
-    <title>Florian Meneses' Portfolio</title>
-</head>
-<body>
-    <header>
+<header>
         <section class="title-nav">
             <div id="name-logo">
                 <h1>Florian Meneses</h1>
@@ -26,8 +13,8 @@
             </nav>
         </section>
         <section id="hero-banner">
-            <img id="avatar" src="./assets/img/gura.png" alt="Gura Avatar">
-            <img id="hero-bg" src="./assets/img/abstract14095.jpg" alt="Main Image">
+            <img id="avatar" src="/img/gura.png" alt="Gura Avatar">
+            <img id="hero-bg" src="/img/abstract14095.jpg" alt="Main Image">
             <div id="hero-text">
                 <h2>Welcome!</h2>
             </div>
@@ -42,13 +29,13 @@
                 <p>
                     Passionate gaming industry veteran, working with tool and automation frameworks. Burgeoning Full Stack Developer.
                 </p>
-                <div class="tech-stack">
-                    <h4>Languages:</h4>
-                    <ol class="languages">
-                        <li>Javascript</li>
-                        <li>C#</li>
-                        <li>Python</li>
-                    </ol>
+                <div class="tech-stack-container">
+                    <div >
+                        {{> languages }}
+                    </div>
+                    <div>
+                        {{> tech-stack }}
+                    </div>
                 </div>
             </div>
         </section>
@@ -66,7 +53,7 @@
                                     Javascript/Bootstrap CSS
                                 </p>
                             </div>
-                            <img src="./assets/img/5115.jpg" alt="Weather Dashboard">
+                            <img src="/img/5115.jpg" alt="Weather Dashboard">
                         </a>
                     </div>
                     <div id="app-card-container">
@@ -78,7 +65,7 @@
                                         Javascript/CSS
                                     </p>
                                 </div>
-                                <img src="./assets/img/48093.jpg" alt="Task Scheduler">
+                                <img src="/img/48093.jpg" alt="Task Scheduler">
                             </a>
                         </div>
                         <div id="app-2" class="app-card">
@@ -89,7 +76,7 @@
                                         Javascript/CSS
                                     </p>
                                 </div>
-                                <img src="./assets/img/abstract2993088.jpg" alt="JS Quiz">
+                                <img src="/img/abstract2993088.jpg" alt="JS Quiz">
                             </a>
                         </div>
                         <div id="app-3" class="app-card">
@@ -100,7 +87,7 @@
                                         Javascript/Foundation CSS
                                     </p>
                                 </div>
-                                <img src="./assets/img/abstract151516618.jpg" alt="Recipe Champion">
+                                <img src="/img/abstract151516618.jpg" alt="Recipe Champion">
                             </a>
                         </div>
                         <div id="app-4" class="app-card">
@@ -111,7 +98,7 @@
                                         Javascript
                                     </p>
                                 </div>
-                                <img src="./assets/img/abstract98362664.jpg" alt="Password Generator">
+                                <img src="/img/abstract98362664.jpg" alt="Password Generator">
                             </a>
                         </div>          
                     </div>
@@ -124,7 +111,7 @@
             </div>
             <div class="col-2">
                 <div id="resume-dl">
-                    <a href="./assets/content/MenesesFlorian_Resume.pdf" download="FlorianMeneses_Resume">Download Resume</a>
+                    <a href="/content/MenesesFlorian_Resume.pdf" download="FlorianMeneses_Resume">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -153,6 +140,6 @@
             </div>
         </section>
     </main>
-    <script type="text/javascript" src="/assets/js/animations.js"></script>
+    <script type="text/javascript" src="/js/animations.js"></script>
 </body>
 </html>

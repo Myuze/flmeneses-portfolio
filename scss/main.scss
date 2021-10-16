@@ -1,0 +1,529 @@
+// main.scss
+// Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/buttons";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 6. Add additional custom code here
+
+/* Initial Global Styles */
+
+:root {
+  /* Text Color Themes */
+  --light: aqua;
+  --dark: black;
+
+  /* Font Families */
+  --apps-title: Impact;
+  --apps-subtitle: 'Courier New', Courier, monospace;
+  --cinzel-400: 'Cinzel', serif;
+
+  /* Font Sizes */
+  --h1-default: 2.5rem;
+
+  /* Links Font Families */
+  --app-links: 'Courier New', Courier, monospace;
+  --michroma: 'Michroma', sans-serif;
+  --aldrich: 'Aldrich', sans-serif;
+
+  /* Background Colors */
+  --app-bg-color-fb: rgb(0, 0, 0);
+  --app-bg-color: rgba(0, 238, 255, 0.7);
+
+  /* Animations Speeds */
+  --lang-transition: 2000ms;
+  --lang-delay: 1000ms;
+  $lang-delay: 1000ms;
+  --lang-delay-diff: 500ms;
+
+  /* Languages Initial Position */
+  --lang-start-pos: 10rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--light);
+  background: var(--app-bg-color-fb);
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+#about-me {
+  padding: 1rem;
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: var(--michroma);
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(to bottom, rgb(177, 80, 180, 0.24), black, black);
+  border-radius: 20px;
+  overflow: hidden;
+
+  li {
+    color: lime;
+    font-family: var(--apps-subtitle)
+  }
+}
+
+.languages .tech-stack {
+  position: relative;
+  color:rgb(51, 204, 37);
+  font-family: var(--apps-subtitle);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Tech Stack Animations
+
+$lang-delay: 1000ms;
+$lang-ratio: .5;
+
+@for $i from 1 through 3 {
+  .languages li:nth-child(#{$i}) {
+    opacity: 0;
+    transform: translateY(var(--lang-start-pos));
+    animation: topToBottom var(--lang-transition) ease (#{$lang-delay * $i * $lang-ratio}) forwards;
+  }
+}
+
+@for $i from 1 through 5 {
+  .tech-stack li:nth-child(#{$i}) {
+    opacity: 0;
+    transform: translateY(var(--lang-start-pos));
+    animation: topToBottom var(--lang-transition) ease (#{$lang-delay * $i * $lang-ratio}) forwards;
+  }
+}
+
+@keyframes topToBottom {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+h1 {
+  align-self: center;
+  font-size: var(--h1-default);
+  font-family: var(--aldrich);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: 'Michroma', sans-serif;
+}
+
+a {
+  font-family: var(--app-links);
+  text-decoration: none;
+  color: var(--light);
+}
+
+a:hover:not(#main-app a, .app-card a) {
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+li {
+  list-style: none;
+}
+
+#main-app {
+  background-image: url("https://github.com/Myuze/weather-fm/raw/main/weather.jpg");
+  background-size:cover;
+}
+
+#app-1 {
+  background-image: url("https://github.com/Myuze/calendar-fm/raw/master/calendar.jpg");
+  background-size: cover;
+}
+
+#app-2 {
+  background-image: url("https://github.com/Myuze/js-quiz/raw/main/js-quiz.JPG");
+  max-width: 100%;
+  background-size: cover;
+}
+
+#app-3 {
+  background-image: url("https://github.com/Myuze/recipe-champion/raw/main/recipe-champion.jpg");
+  max-width: 100%;
+  background-size: cover;
+}
+
+#app-4 {
+  background-image: url("https://github.com/Myuze/genpass-fm/raw/main/passgen.jpg");
+  max-width: 100%;
+  background-size: cover;
+}
+
+/* Mobile Formatting from 320 -> 425 screens */
+
+header {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.title-nav {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#name-logo {
+  font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+}
+
+.header-nav {
+  padding: 1rem 0;
+}
+
+.header-nav li {
+  padding: 0.5rem;
+}
+
+.header-nav a:hover,
+.contact-item a:hover {
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+#hero-banner {
+  position: relative;
+}
+
+#hero-bg {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+#avatar {
+  position: absolute;
+  width: 100%;
+  max-width: 50vw;
+  clip-path: circle(20vw at center);
+  filter: drop-shadow(30px 10px 4px rgba(0, 255, 255, 0.959));
+}
+
+#hero-text {
+  position: absolute;
+  font-size: 2vh;
+  bottom: 5px;
+  right: 0;
+  padding: 0.3rem 0.5rem;
+  background: var(--app-bg-color);
+  color: var(--dark);
+}
+
+main section {
+  padding: 0 1rem 1rem;
+}
+
+main h3 {
+  padding-bottom: 1rem;
+}
+
+#apps {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.7rem;
+  color: var(--black);
+}
+
+#apps h4 {
+  font-size: 5vw;
+}
+
+#apps h5 {
+  font-size: 1rem;
+}
+
+#main-app {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+#main-app .app-text {
+  position: absolute;
+  bottom: 25px;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--apps-title);
+  background: var(--app-bg-color);
+  color: var(--dark);
+}
+
+#main-app,
+.app-card {
+  border: 1px solid var(--light);
+}
+
+#apps img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 500ms ease-in-out;
+}
+
+#apps img:hover {
+  opacity: 0.0%;
+}
+
+#apps img:focus {
+  outline: 2px solid var(--light)
+}
+
+#app-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  color: var(--black);
+}
+
+.app-card {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.app-card .app-text {
+  position: absolute;
+  bottom: 0px;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--apps-title);
+  color: var(--dark);
+  background: var(--app-bg-color-fb); /* fallback color */
+  background: var(--app-bg-color);
+}
+
+/* Format Adjustment for viewing larger than 425px */
+
+@media screen and (min-width: 425px) {
+  h2 {
+      font-size: 3rem;
+  }
+  main h3 {
+      font-size: 1rem;
+  }
+
+  .header-nav li {
+      display: inline;
+  }
+
+  .header-nav li:hover {
+      color: white;
+      border-bottom: 4px solid white;
+  }
+
+  main section {
+      display: flex;
+  }
+
+  #avatar {
+      max-width: 255px;
+      clip-path: circle(90px at center);
+  }
+
+  #hero-text {
+      bottom: 50px;
+      right: 20px;
+  }
+
+  #app-card-container {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .app-card {
+      margin: 10px 0px 0px 0px;
+      flex-basis: 49%;   
+      height: 15vw;
+  }
+
+  #main-app,
+  .app-card {
+      border: 5px solid var(--light)
+  }
+
+  #main-app:hover,
+  .app-card:hover {
+      box-shadow: 0px 0px 8px
+      rgba(232, 102, 236, 1), 0 0 15px
+      rgba(232, 102, 236, 1);
+  }
+
+  #resume {
+      font-size: 1.5rem;
+  }
+
+  .col-1 {
+      flex: 1 1 30%;
+      font-size: 1.4rem;
+      font-family: 'Michroma', sans-serif;
+      margin-right: 10px;
+      border-right: 5px solid cyan;
+  }
+  
+  .col-2 {
+      flex: 1 1 70%;
+      margin: auto;
+  }
+}
+
+/* Format Adjustment for viewing larger than 768px */
+
+@media screen and (min-width: 768px) {
+  h2 {
+      font-size: 4rem;
+  }
+
+  main h3 {
+      font-size: 2rem;
+  }
+  .title-nav {
+      flex-flow: row wrap;
+  }
+
+  #name-logo {
+      font-size: 4vw;
+      padding-left: 1rem;
+  }
+
+  #hero-text {
+      font-size: 5vh;
+  }
+
+  .col-1 {
+      font-size: 3vw;
+  }
+
+  
+  #apps h5 {
+      font-size: 2vw;
+  }
+
+  #main-app .app-text p {
+      font-size: 2vw;
+  }
+  
+  .app-card .app-text {
+      bottom: 25px;
+  }
+
+  .app-card .app-text p {
+      font-size: 1.2vw;
+  }
+  
+  #contact-me {
+      align-content: center;
+  }
+
+  #contact-info-container {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+  }
+
+  .contact-item{
+      margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+      font-size: 6rem;
+  }
+
+  #name-logo h1 {
+      font-size: 5vw;
+  }
+
+  .header-nav {
+      font-size: 2vw;
+  }
+  
+  #about-me {
+      font-size: 1.5rem;
+  }
+
+  #about-me .col-2 {
+      font-size: 2rem;
+  }
+
+  .app-card .app-text p {
+      font-size: 1.3vw;
+  }
+
+  .col-1 {
+      font-size: 4vw;
+  }
+
+  #contact-info-container {
+      font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  h2 {
+      font-size: 12rem;
+  }
+
+  h3 {
+      font-size: 12rem;
+  }
+
+  a {
+      font-size: 12rem;
+  }
+
+  #name-logo h1 {
+      font-size: 7vw;
+  }
+
+  #about-me {
+      font-size: 2.5rem;
+  }
+
+  #resume-dl {
+      font-size: 3rem;
+  }
+
+  #contact-info-container {
+      font-size: 3rem;
+  }
+}
