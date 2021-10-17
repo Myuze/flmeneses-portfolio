@@ -5,6 +5,17 @@ let sequelize;
 
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
+} else if(process.env.BLUEHOST) {
+  sequelize = new Sequelize(
+    process.env.DB_CPNL_NAME,
+    process.env.DB_CPNL_USER,
+    process.env.DB_CPNL,
+    {
+      host: '162.241.24.233',
+      dialect: 'mysql',
+      port: 3306,
+    }
+  );
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
