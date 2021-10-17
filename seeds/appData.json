@@ -1,6 +1,7 @@
 [
   {
     "app_name": "Ubiquitous",
+    "app_subtitle": "JS/Handlebars/SASS/Express",
     "app_img_URL": "https://raw.githubusercontent.com/Myuze/ubiquitous-happiness/main/ub-hero.png",
     "app_link_URL": "https://ubiquitous-p2.herokuapp.com/",
     "app_repo_URL": "https://github.com/Myuze/ubiquitous-happiness",
@@ -8,25 +9,29 @@
   },
   {
     "app_name": "Team Profile Generator",
+    "app_subtitle": "Javascript/Inquirer",
     "app_img_URL": "https://github.com/Myuze/team-profile-gen/raw/main/team_profile.jpg",
     "app_repo_URL": "https://github.com/Myuze/team-profile-gen",
     "is_main": false
   },
   {
     "app_name": "Weather Dashboard",
+    "app_subtitle": "Bootstrap/Javascript",
     "app_img_URL": "https://github.com/Myuze/weather-fm/raw/main/weather.jpg",
     "app_repo_URL": "https://github.com/Myuze/weather-fm",
     "is_main": false
   },
   {
     "app_name": "Recipe Champion",
+    "app_subtitle": "Javascript/Foundation CSS",
     "app_img_URL": "https://github.com/Myuze/recipe-champion/raw/main/recipe-champion.jpg",
     "app_link_URL": "https://myuze.github.io/recipe-champion/docs/index.html",
     "app_repo_URL": "https://github.com/Myuze/recipe-champion",
     "is_main": false
   },
   {
-    "app_name": "Team Profile Generator",
+    "app_name": "Note Taker",
+    "app_subtitle": "JS/Express",
     "app_img_URL": "https://github.com/Myuze/notetaker-fm/raw/main/notetaker.jpg",
     "app_link_URL": "https://notetaker-fm.herokuapp.com/",
     "app_repo_URL": "https://github.com/Myuze/notetaker-fm",

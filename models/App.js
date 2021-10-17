@@ -15,6 +15,10 @@ App.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    app_subtitle: {
+      type: DataTypes.STRING(40),
+      allowNull: true
+    },
     app_img_URL: {
       type: DataTypes.STRING,
       allowNull: true
