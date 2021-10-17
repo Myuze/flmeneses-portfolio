@@ -45,62 +45,17 @@
             </div>
             <div class="col-2">
                 <div id="apps">
-                    <div id="main-app">
-                        <a href="https://github.com/Myuze/weather-fm">
-                            <div class="app-text">
-                                <h4>Weather Dashboard</h4>
-                                <p>
-                                    Javascript/Bootstrap CSS
-                                </p>
-                            </div>
-                            <img src="/img/5115.jpg" alt="Weather Dashboard">
-                        </a>
-                    </div>
+                    {{#each apps as |app| }}
+                    {{#if app.is_main}}
+                    {{> main-app }}
+                    {{/if}}
+                    {{/each}}
                     <div id="app-card-container">
-                        <div id="app-1" class="app-card">
-                            <a href="https://github.com/Myuze/calendar-fm">
-                                <div class="app-text">
-                                    <h5>Task Scheduler</h5>
-                                    <p>
-                                        Javascript/CSS
-                                    </p>
-                                </div>
-                                <img src="/img/48093.jpg" alt="Task Scheduler">
-                            </a>
-                        </div>
-                        <div id="app-2" class="app-card">
-                            <a href="https://github.com/Myuze/js-quiz">
-                                <div class="app-text">
-                                    <h5>JS Quiz</h5>
-                                    <p>
-                                        Javascript/CSS
-                                    </p>
-                                </div>
-                                <img src="/img/abstract2993088.jpg" alt="JS Quiz">
-                            </a>
-                        </div>
-                        <div id="app-3" class="app-card">
-                            <a href="https://github.com/Myuze/recipe-champion">
-                                <div class="app-text">
-                                    <h5>Recipe Champion</h5>
-                                    <p>
-                                        Javascript/Foundation CSS
-                                    </p>
-                                </div>
-                                <img src="/img/abstract151516618.jpg" alt="Recipe Champion">
-                            </a>
-                        </div>
-                        <div id="app-4" class="app-card">
-                            <a href="https://github.com/Myuze/genpass-fm">
-                                <div class="app-text">
-                                    <h5>Password Generator</h5>
-                                    <p>
-                                        Javascript
-                                    </p>
-                                </div>
-                                <img src="/img/abstract98362664.jpg" alt="Password Generator">
-                            </a>
-                        </div>          
+                        {{#each apps as |app| }}
+                        {{#unless app.is_main }}
+                        {{> apps }}
+                        {{/unless}}
+                        {{/each}}
                     </div>
                 </div>
             </div>
